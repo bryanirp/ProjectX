@@ -1,0 +1,9 @@
+{
+  "modName": "Hello World Mod",
+  "modID": "abkaspo_helloworld",
+  "modVersion": "1.0",
+  "description": "This mod says hello world when second scene starts",
+  "urls": [],
+  "images": [],
+  "authors": ["ABKaspo Games"]
+}
