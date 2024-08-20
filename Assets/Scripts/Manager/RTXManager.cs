@@ -5,7 +5,7 @@ using UnityEditor;
 using UnityEditor.TerrainTools;
 using UnityEngine;
 using UnityEngine.Rendering.HighDefinition;
-namespace ABKaspo.Game
+namespace Game
 {
     public enum RenderingType
     {
@@ -102,5 +102,5 @@ namespace ABKaspo.Game
 
         }
     }
-    
+
 }

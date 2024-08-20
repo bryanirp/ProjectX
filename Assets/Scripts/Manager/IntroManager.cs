@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using ABKaspo.UI;
+using Game.UI;
 using UnityEngine.Events;
-namespace ABKaspo.Game
+namespace Game
 {
     public class IntroManager : MonoBehaviour
     {
@@ -13,7 +13,7 @@ namespace ABKaspo.Game
             Dialogue.instance
                 .SetTitle("Warning")
                 .SetMessage("This game contains sensitive and sexual content intended for adult audiences. Do you want to open the game?")
-                .SetTitleBackgroundColor(new Color(175/255f, 0/255f, 0/255f, 255/255f))
+                .SetTitleBackgroundColor(new Color(175 / 255f, 0 / 255f, 0 / 255f, 255 / 255f))
                 .SetAnswerType(AnswerType.Question)
                 .SetPopupType(PopupType.Warning)
                 .OnClose(() => LoadScene())

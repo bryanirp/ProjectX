@@ -1,9 +1,8 @@
-using ABKaspo.Game;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace ABKaspo.Game
+namespace Game
 {
     public class LightManager : MonoBehaviour
     {

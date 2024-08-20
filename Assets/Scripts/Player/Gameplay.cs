@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace ABKaspo.Game
+namespace Game
 {
     public enum GameState
     {
@@ -23,7 +23,7 @@ namespace ABKaspo.Game
         // Update is called once per frame
         void Update()
         {
-            if(Input.GetKeyDown(KeyCode.Escape))
+            if (Input.GetKeyDown(KeyCode.Escape))
             {
                 Debug.Log("Game: GameState =" + gameState.GetType().ToString());
             }

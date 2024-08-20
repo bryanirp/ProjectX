@@ -7,7 +7,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace ABKaspo.UI
+namespace Game.UI
 {
     public enum PopupType
     {
@@ -203,8 +203,8 @@ namespace ABKaspo.UI
             if (tempDialog.popupType == PopupType.Message) typePanel.sprite = messType;
             if (tempDialog.popupType == PopupType.Warning) typePanel.sprite = warnType;
             if (tempDialog.popupType == PopupType.Error) typePanel.sprite = errType;
-            
-            if(tempDialog.answerType == AnswerType.Question)
+
+            if (tempDialog.answerType == AnswerType.Question)
             {
                 button1GameObject.SetActive(true);
                 button2GameObject.SetActive(true);

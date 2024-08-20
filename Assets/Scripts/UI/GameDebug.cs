@@ -6,7 +6,7 @@ using TMPro;
 using UnityEngine;
 using System;
 using Desdinova;
-namespace ABKaspo.UI
+namespace Game.UI
 {
     public class GameDebug : MonoBehaviour
     {
@@ -16,13 +16,13 @@ namespace ABKaspo.UI
         public Transform Position;
         public ConsoleGUIController console;
         [Header("Game Debug UI")]
-        public TMP_Text companyName; 
-        public TMP_Text gameName; 
-        public TMP_Text gameVersion; 
-        public TMP_Text gameScene; 
-        public TMP_Text gpuModel; 
-        public TMP_Text cpuModel; 
-        public TMP_Text ramUsage; 
+        public TMP_Text companyName;
+        public TMP_Text gameName;
+        public TMP_Text gameVersion;
+        public TMP_Text gameScene;
+        public TMP_Text gpuModel;
+        public TMP_Text cpuModel;
+        public TMP_Text ramUsage;
         public TMP_Text framerate;
         public TMP_Text PositionTXT;
         public TMP_Text RotationTXT;

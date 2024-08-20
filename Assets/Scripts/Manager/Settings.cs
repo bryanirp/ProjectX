@@ -6,8 +6,8 @@ using UnityEngine.SceneManagement;
 using Unity.VisualScripting;
 using System;
 using TMPro;
-using ABKaspo.UI;
-namespace ABKaspo.Game
+using Game.UI;
+namespace Game
 {
     public class Settings : MonoBehaviour
     {
@@ -65,16 +65,16 @@ namespace ABKaspo.Game
             // Apply Frame Rate
             ChangeFramerate();
             LoadSettings();
-            
+
         }
         // Load Settings
         void LoadSettings()
         {
-            PlayerConfig config = SaveManager.LoadPlayerConfig(); 
+            PlayerConfig config = SaveManager.LoadPlayerConfig();
             fullscreenTog.isOn = config.fullscreen;
             vsycnTog.isOn = config.vsync;
             rtxToggle.isOn = config.rtx;
-            resolutionDropdown.value =  FindResolutionIndex(config.resolution);
+            resolutionDropdown.value = FindResolutionIndex(config.resolution);
             resolutionDropdown.RefreshShownValue();
         }
         // Find Resoltion By index
@@ -91,7 +91,7 @@ namespace ABKaspo.Game
         }
         private void Start()
         {
-            
+
         }
         public void ApplyScreenOptions()
         {

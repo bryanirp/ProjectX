@@ -4,8 +4,8 @@ using UnityEngine;
 using UnityEditor;
 using TMPro;
 using UnityEngine.SceneManagement;
-using ABKaspo.UI;
-namespace ABKaspo.Game
+using Game.UI;
+namespace Game
 {
     public class MainMenuUI : MonoBehaviour
     {
@@ -42,7 +42,7 @@ namespace ABKaspo.Game
         }
         void Update()
         {
-            
+
         }
         public void InfoSetPlayerName()
         {
@@ -54,8 +54,27 @@ namespace ABKaspo.Game
         public void SaveAndReloadPlayerName()
         {
             PlayerConfig config = SaveManager.LoadPlayerConfig();
-            config.playerName = playerNameField.text;
-            SaveManager.SavePlayerConfig(config);
+            if (playerNameField.text == null)
+            {
+                config.playerName = "Player";
+                SaveManager.SavePlayerConfig(config);
+            }
+            else if (playerNameField.text == "")
+            {
+                config.playerName = "Player";
+                SaveManager.SavePlayerConfig(config);
+            }
+            else if (playerNameField.text != "")
+            {
+                config.playerName = playerNameField.text;
+                SaveManager.SavePlayerConfig(config);
+            }
+            else if (playerNameField.text != null)
+            {
+                config.playerName = playerNameField.text;
+                SaveManager.SavePlayerConfig(config);
+            }
+
             hiUsername.text = "Hi " + SaveManager.LoadPlayerConfig().playerName + "!";
         }
         public void QuitGame()
@@ -66,7 +85,7 @@ namespace ABKaspo.Game
                 //.SetTitleBackgroundColor(new Color(0.769f, 0f, 0f, 1f))
                 //.SetMessageBackgroundColor(new Color(0.1f, 0.1f, 0.1f, 0.5019608f))
                 .SetAnswerType(AnswerType.Question)
-                .OnCancel(()=>CancelQuit())
+                .OnCancel(() => CancelQuit())
                 .OnClose(QuitGameFunc)
                 .Show();
         }
@@ -111,7 +130,7 @@ namespace ABKaspo.Game
                 .SetMessage("You are opening a URL! Are you sure you want to open it?")
                 .SetPopupType(PopupType.Message)
                 .OnClose(() => OpenURLFunction(url))
-                .Show();    
+                .Show();
         }
         private void OpenURLFunction(string url)
         {

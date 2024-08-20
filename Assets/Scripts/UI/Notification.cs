@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace ABKaspo.UI
+namespace Game.UI
 {
     public class NotificationData
     {
@@ -41,7 +41,7 @@ namespace ABKaspo.UI
         NotificationData notification = new NotificationData();
         NotificationData tempNotf;
         Queue<NotificationData> notfQueue = new Queue<NotificationData>();
-        [HideInInspector]public bool isAnimating = false;
+        [HideInInspector] public bool isAnimating = false;
         private Vector3 positionA;
         private Vector3 positionB;
         #endregion
@@ -101,14 +101,14 @@ namespace ABKaspo.UI
             gameObject.SetActive(false);
             IsActive = false;
 
-            if(tempNotf != null && tempNotf.OnClose != null)
+            if (tempNotf != null && tempNotf.OnClose != null)
             {
                 tempNotf.OnClose.Invoke();
             }
 
             StopAllCoroutines();
 
-            if(notfQueue.Count != 0)
+            if (notfQueue.Count != 0)
             {
                 ShowNextNotification();
             }
@@ -138,7 +138,7 @@ namespace ABKaspo.UI
         {
             float startTime = Time.time;
             float alpha = 0f;
-            
+
             Vector3 targetPosition = positionA;
             Vector3 initialPosition = positionB;
 
